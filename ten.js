@@ -3,7 +3,7 @@ function findMost(arr) {
     if (!arr.length) return
     if (arr.length === 1) return 1
     let res = {}
-    let maxName
+    let maxName, maxNum = 0
     // 遍历数组
     arr.forEach((item) => {
         res[item] ? res[item] += 1 : res[item] = 1
@@ -15,7 +15,7 @@ function findMost(arr) {
             maxName = r
         }
     }
-    return '出现次数最多的元素为:' + maxName
+    return maxName
 }
 //第二题
 
@@ -44,9 +44,8 @@ function ts(n) {
     for (let i = 0; i < len; i++)
         if (str[i] != str[str.length - 1 - i]) flag = false
     return flag
-  
 }
-
+ts(121)
 //第五题
 function bubbleSort(arr) {
     var len = arr.length;
